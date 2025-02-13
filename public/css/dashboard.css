@@ -1,0 +1,21 @@
+:root {
+    --color-primary: #233142;
+    --color-secondary: #455d7a;
+    --color-tertiary: #e3e3e3;
+    --color-accent: #f95959;
+}
+
+body {
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
+}
+
+a {
+    color: var(--color-accent);
+}
+
+.div_one {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Simple Stats Tracker</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <div class="div_one">
+        <h3>Simple Stats Tracker</h3>
+        <h1>Dashboard</h1>
+        <hr style="margin-bottom: 2rem;">
+        <% if (stats.length) { %>
+            <% for (const stat of stats) { %>
+                <div id="<%- stat.id %>" style="border: 1px solid var(--color-secondary); padding-bottom: 13px;">
+                    <p><%- stat.title %> - <%- stat.number %></p>
+                    <details>
+                        <summary>Update Stat</summary>
+                        <form action="/api/update" method="post">
+                            <input type="text" id="title" name="title" placeholder="Stat Name" value="<%- stat.title %>" required>
+                            <input type="number" id="number" name="number" placeholder="0" value="<%- stat.number %>" required>
+                            <input type="text" id="statId" name="statId" value="<%- stat.id %>" required style="display: none;">
+                            <button type="submit">Update Stat!</button>
+                        </form>
+                    </details>
+                </div>
+            <% } %>
+        <% } else { %>
+            <div id="null">
+                <p>No stats (yet) - Create your first!</p>
+                <form action="/api/add" method="post">
+                    <input type="text" id="title" name="title" placeholder="Stat Name">
+                    <input type="number" id="number" name="number" placeholder="0">
+                    <button type="submit">Add Stat!</button>
+                </form>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "simple-stats-tracker",
+  "version": "1.0.0",
+  "description": "Lightweight General-Purpose Stats Tracker",
+  "homepage": "https://github.com/SleepingAmi/simple-stats-tracker#readme",
+  "bugs": {
+    "url": "https://github.com/SleepingAmi/simple-stats-tracker/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SleepingAmi/simple-stats-tracker.git"
+  },
+  "license": "MIT",
+  "author": "SleepingAmi",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index",
+    "start": "node index"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "nodemon": "^3.1.9",
+    "sqlite3": "^5.1.7"
+  }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats | Simple Stats Tracker</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <div class="div_one">
+        <h3>Simple Stats Tracker</h3>
+        <h1>Stats</h1>
+        <div class="div_two">
+            <% if (stats.length) { %>
+                <% for (const stat of stats) { %>
+                    <div id="<%- stat.id %>">
+                        <p><%- stat.title %> - <%- stat.number %></p>
+                    </div>
+                <% } %>
+            <% } else { %>
+                <p>no data</p>
+            <% } %>
+        </div>
+    </div>
+
+
+</body>
+</html>
